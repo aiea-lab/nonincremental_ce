@@ -95,7 +95,7 @@ The optimal algorithm can take more than one hour per unit. When it is run only 
 
 To run the experiments for Table 7, run the incremental beam search with the M-MESH heuristic:
 ```bash
-python3 mmesh.py --dataset=broden	--model=<MODEL> --layer=<LAYER> --length=3 --beam_limit=5
+python3 mmesh.py --dataset=broden --model=<MODEL> --layer=<LAYER> --length=3 --beam_limit=5
 ```
 with \<MODEL> and \<LAYER> as in Table 2. Then compare it with the incremental beam search of Table 2:
 ```bash
@@ -106,26 +106,18 @@ python3 compare_methods.py --dataset=broden --model=<MODEL> --layer=<LAYER> --le
 
 To run the experiments for Table 8:
 ```bash
-python3 ablation.py --dataset=snli	--model=bert --layer=mlp --length=5 --beam_limit=10 --ablation=<ABLATION>
+python3 ablation.py --dataset=snli --model=bert --layer=mlp --length=5 --beam_limit=10 --ablation=<ABLATION>
 ```
 Replace \<ABLATION> with `no_recombinations`, `no_functional_equivalence`, or `no_non_incremental_expansion`. Then compare each ablation with the full version of Table 1:
 ```bash
-python3 compare_methods.py --dataset=snli --model=bert --layer=mlp --length=5 --beam_limit=10 --compared_searches=<ABLATION>,non_incremental 
-	--include_optimal=false
+python3 compare_methods.py --dataset=snli --model=bert --layer=mlp --length=5 --beam_limit=10 --compared_searches=<ABLATION>,non_incremental --include_optimal=false
 ```
 
 ### Table 9
 
 To run the experiment for Table 9:
 ```bash
-python3 main.py \
-	--dataset=snli \
-	--model=bert \
-	--layer=mlp \
-	--search=<ALGORITHM> \
-	--length=5 \
-	--beam_limit=50 \
-	--random_units=50
+python3 main.py --dataset=snli --model=bert --layer=mlp --search=<ALGORITHM> --length=5 --beam_limit=50 --random_units=50
 ```
 with \<ALGORITHM> equal to `incremental` and `non_incremental`. Then run `compare_methods.py` with the same flags, except `--search`.
 

@@ -79,11 +79,10 @@ For example, to explain unit 1 of BERT with the non-incremental beam search:
 python3 main.py --dataset=snli --model=bert --layer=mlp --search=non_incremental --length=5 --beam_limit=10 --units=1
 ```
 
-
 Explanations are saved in `data/results/`. Specifically, the explanations of each search are saved in separate subdirectories:
-	- `data/results/<DATASET>/<MODEL>/<LAYER>/incremental/`
-	- `data/results/<DATASET>/<MODEL>/<LAYER>/non_incremental/`
-	- `data/results/<DATASET>/<MODEL>/<LAYER>/optimal/`
+- `data/results/<DATASET>/<MODEL>/<LAYER>/incremental/`
+- `data/results/<DATASET>/<MODEL>/<LAYER>/non_incremental/`
+- `data/results/<DATASET>/<MODEL>/<LAYER>/optimal/`
 
 
 ### Generate Qualitative Difference Visualizations
