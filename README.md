@@ -90,12 +90,7 @@ Explanations are saved in `data/results/`. Specifically, the explanations of eac
 Generate qualitative difference visualizations between the incremental and the non-incremental beam searches on the units where they find a different IoU:
 
 ```bash
-python3 visualize.py \
-	--dataset=<DATASET> \
-	--model=<MODEL> \
-	--layer=<LAYER> \
-	--length=<LENGTH> \
-	--beam_limit=<BEAM_SIZE>
+python3 visualize.py --dataset=<DATASET> --model=<MODEL> --layer=<LAYER> --length=<LENGTH> --beam_limit=<BEAM_SIZE>
 ```
 
 - Visualizations are saved under `data/figures/<DATASET>/<MODEL>/<LAYER>/`.
