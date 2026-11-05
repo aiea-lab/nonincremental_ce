@@ -1,7 +1,11 @@
 # Beyond Incremental Beam Search for Compositional Explanations of Neurons
 This repository provides the official implementation of the algorithm introduced in the paper **"Beyond Incremental Beam Search for Compositional Explanations of Neurons."** *Biagio La Rosa and Leilani H. Gilpin*. NeurIPS 2026.
 
+We also added support for the non-incremental appproach in the `compositional_explanations` Python package. The package can be installed via pip:
 
+``
+pip install compositional_explanations
+``
 ## Contributions and their Implementation
 Compositional explanations describe the alignment between neuron activations and concepts through logical formulas, obtained by solving a search problem over combinations of concepts.
 
